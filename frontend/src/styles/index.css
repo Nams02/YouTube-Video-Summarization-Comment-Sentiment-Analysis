@@ -1,0 +1,57 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  /* Unified font family */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f4f8;
+  /* Consistent background color */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Ensuring smooth transitions for page-wide elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  /* Remove underlines by default */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  /* Remove default margin from headings */
+}
+
+ul,
+ol {
+  list-style: none;
+  /* Remove default list styles */
+}
+
+button {
+  cursor: pointer;
+  /* Indicate that the button is clickable */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+    /* Adjust body font size for mobile */
+  }
+}

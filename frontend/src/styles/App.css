@@ -1,0 +1,161 @@
+/* Global Variables */
+:root {
+  --primary-color: #0057a7;
+  --secondary-color: #008080;
+  --neutral-gray: #f0f4f8;
+  --highlight-color: #ffc107;
+  --font-family: 'Roboto', sans-serif;
+}
+
+/* App-wide Styles */
+.App {
+  text-align: center;
+  font-family: var(--font-family);
+  background-color: var(--neutral-gray);
+  color: var(--primary-color);
+  padding: 20px;
+  /* Adjusted padding */
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+/* Animated Logo with Reduced Motion Preference */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* Keyframes for Logo Spin Animation */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.App-header {
+  background-color: var(--primary-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 20px;
+}
+
+.App-link {
+  color: var(--highlight-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.App-link:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+/* Button and Icon Styles */
+button,
+.icon {
+  color: var(--highlight-color);
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover,
+.icon:hover {
+  color: white;
+  background-color: var(--primary-color);
+  box-shadow: 0px 4px 12px rgba(0, 87, 167, 0.3);
+  transform: scale(1.05);
+}
+
+/* Container Styling for Pages */
+.container {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Consistent Fade-in Effect */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design Adjustments */
+
+/* For Small Screens */
+@media (max-width: 600px) {
+  .App {
+    padding: 10px;
+    /* Reduce padding on mobile */
+  }
+
+  .App-logo {
+    height: 30vmin;
+    /* Adjust logo size on small screens */
+  }
+
+  .App-header {
+    min-height: 80vh;
+    /* Adjust header height */
+    padding: 15px;
+    /* Reduce padding */
+    font-size: calc(10px + 1.5vmin);
+    /* Adjust font size for mobile */
+  }
+
+  .App-link {
+    font-size: 14px;
+    /* Adjust link font size for smaller screens */
+  }
+
+  button,
+  .icon {
+    font-size: 14px;
+    /* Adjust button and icon size on mobile */
+  }
+
+  .container {
+    padding: 10px;
+    /* Adjust container padding */
+  }
+}
+
+/* For Users with Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .App-logo {
+    animation: none;
+    /* Disable logo spin animation */
+  }
+
+  button,
+  .icon {
+    transition: none;
+    /* Disable button/icon hover transitions */
+  }
+
+  .fade-in {
+    animation: none;
+    /* Disable fade-in animation */
+  }
+}
